@@ -16,6 +16,8 @@ Visuals and Data model
 
 https://drive.google.com/file/d/1scF9JuZlCrXEOP6EC2pL-Tub6Qk5mJ_4/view?usp=sharing
 
+User flow
+
 
 
 
