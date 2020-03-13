@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<h2>
+    Choose Ingredient!!
+</h2>
+
+    <body body style="background-color:powderblue;">
+
+
+<div class="row">
+    <!-- <form class="col s12" action="/recipes/" method="POST">
+       
+<h3><p>Select the ingredients from the list:</p></h3>
+        <label for="cars">Choose Ingredient:</label>
+
+<select id="Add Ingredients">
+  <option value="chicken">Chicken</option>
+  <option value="rice">Rice</option>
+  <option value="beans">Beans</option>
+  <option value="cauliflower">Cauliflower</option>
+</select>
+            <button class="btn waves-effect waves-light" type="submit">Submit</button>
+        </div>
+
+    </form> -->
+
+    {% for ingredient in ingredients %}
+        <a href="/recipes/{{ ingredient.ingredient_id }}">{{ ingredient.ingredient_name }}</a>
+    {% endfor %}
+
+    <h2>
+    Add Ingredients
+</h2>
+
+
+<!-- <div class="row">
+    <form class="col s12" action="{{ url_for('recipe') }}" method="POST">
+        <div class="row">
+            <div class="input-field col s12 m8">
+                <input placeholder="Ingredient name" id="ingredient_name" name="ingredeint_name" type="text" class="validate" data-length="50">
+            </div>
+
+            <div class="input-field col s12 m4">
+                <input placeholder="Username" id="user_name" name="user_name" type="text" class="validate">
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="input-field col s12 m6">
+                <select name="main_ingredient" required>
+
+
+Padding-top is different here to what it is for row
+-->
+<!-- 
+                    {% for ingredient in ingredients %}
+                    <option value="{{ ingredient.ingredient_name }}">{{ ingredient.ingredient_name }}</option>
+                    {% endfor %}
+                </select>
+                <label>Main ingredient</label>
+            </div>
+
+
+        <div class="row">
+            <div class="input-field col s9 m4">
+                <select name="ingredients" multiple>
+                    {% for ingredient in ingredients %}
+                    <option value="{{ ingredient.ingredient_name }}">{{ ingredient.ingredient_name }}</option>
+                    {% endfor %}
+                </select>
+                <label>Ingredients</label>
+            </div>
+            <div class="input-field col s3 m2">
+                <a href="{{ url_for('ingredient') }}" class="btn-floating waves-effect waves-light"><i class="material-icons">add</i></a>
+ --> 
+
+</div>
+</body>
+</html>
