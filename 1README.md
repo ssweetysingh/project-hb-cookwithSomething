@@ -16,7 +16,16 @@ Visuals and Data model
 
 https://drive.google.com/file/d/1scF9JuZlCrXEOP6EC2pL-Tub6Qk5mJ_4/view?usp=sharing
 
-User flow
+User Stories:
+As a user wanting to add an ingredients, on the Recipe page can discover new recipes related to an ingredients recipe.
+As a user wanting to add an ingredient, when on the ingredient page user have list of ingredient they can select and submit to get recipes which includeds the ingredients. I click on the ingredient button (next to the Ingredients dropdown), which takes me to the Recipe page where recipe links are provided to get an options which includes that main ingredients.
+
+Features:
+Existing Features
+Ingredient dropdown list – allow users to select ingredients from the list for specific recipes (e.g. chicken recipes) by selecting one or more of the ingredients.
+Recipe page – allows users to search more recipes in the page by clicking on the image.
+source links – allows users by clicking the source link fro more recipes.
+
 
 
 
