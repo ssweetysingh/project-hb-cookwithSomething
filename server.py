@@ -23,25 +23,103 @@ def index():
 
     return render_template('homepage.html')
 
+@app.route('/home')
+def home():
+    """Show Homepage."""
+
+    return render_template('homepage.html')
+
+@app.route('/register', methods=['GET'])
+def register_form():
+    """Show form for user signup."""
+
+    return render_template("register.html")
+
+
+@app.route('/register', methods=['POST'])
+def register_process():
+    """Process registration."""
+
+    # Get form variables
+    username = request.form["username"]
+    password = request.form["password"]
+    
+
+    new_user = User(username=username, password=password)
+
+    db.session.add(new_user)
+    db.session.commit()
+
+    flash(f"User {username} added.")
+    return redirect("/login")
+
+
+@app.route('/login', methods=['GET'])
+def login_form():
+    """Show login page."""
+
+    return render_template("login.html")
+
+
+@app.route('/login', methods=['POST'])
+def login_process():
+    """Process login."""
+
+    # Get form variables
+    username = request.form["username"]
+    password = request.form["password"]
+
+    user = User.query.filter_by(username=username).first()
+
+    if not user:
+        flash("No such user")
+        return redirect("/login")
+
+    if user.password != password:
+        flash("Incorrect password")
+        return redirect("/login")
+
+    session["user_id"] = user.user_id
+
+    flash("Logged in")
+    return redirect("/home")
+
+
+@app.route('/logout')
+def logout():
+    """Log out."""
+
+    del session["user_id"]
+    flash("Logged Out.")
+    return redirect("/")
+
+
 
 @app.route('/recipes')
 def recipe():
     # A query to retrieve a recipe based on id
     return render_template('recipe.html')
 
-@app.route('/ingredient/<ingredient>')
-def ingredient(ingredient):
+@app.route('/ingredients')
+def ingredient():
     # A query to retrieve all recipes that match this ingredient
-    return render_template('recipe.html',recipes=recipes)
+    # TODO: use a user_id stored in session, not one that is hard coded :)
+    if session.get("user_id") is None:
+        return redirect("/login")
+    else:
+        user_id = session["user_id"]
+        app.logger.info("User Id: %s",user_id)
+        ingredients = Ingredient.query.filter_by(user_id=user_id)
+        return render_template('ingredient.html', ingredients=ingredients)
 
 
-# @app.route('/recipe/recipe_ingredients')
-# def recipe_ingrdients():
-#       """Show page for recipes."""
-
-#     recipes = Recipe.query.order_by('recipe_ingredients').all()
-#     return render_template("recipe.html")
-
+@app.route('/recipes/<ingredient_id>')
+def recipe_ingredients(ingredient_id):
+    """Show results for ingredients in recipe."""
+    recipes = Recipe.query.filter(Ingredient.ingredient_id == ingredient_id).all()
+    #return render_template('recipe.html')
+    #return render_template("recipe.html")
+    return redirect("/recipes")
 
 
 if __name__ == "__main__":
