@@ -1,7 +1,7 @@
 
 from jinja2 import StrictUndefined
 
-from flask import Flask, render_template, request, flash, redirect, session
+from flask import Flask, render_template, request, flash, redirect, session, jsonify
 from flask_debugtoolbar import DebugToolbarExtension
 
 from model import connect_to_db, db, User, Ingredient, Menu, Recipe, Recipeingredient, Menurecipe
@@ -47,6 +47,7 @@ def register_process():
 
     new_user = User(username=username, password=password)
 
+
     db.session.add(new_user)
     db.session.commit()
 
@@ -81,8 +82,18 @@ def login_process():
 
     session["user_id"] = user.user_id
 
+    '''jsonify login page'''
+
+    # if username and password:
+    #     name = username
+
+    #     return jsonify({'username' : name})
+
+    # return jsonify({'error' : 'Missing fields'})
+
     flash("Logged in")
     return redirect("/home")
+
 
 
 @app.route('/logout')
@@ -91,7 +102,7 @@ def logout():
 
     del session["user_id"]
     flash("Logged Out.")
-    return redirect("/")
+    return redirect("/home")
 
 
 
