@@ -31,14 +31,14 @@ def home():
 
 @app.route('/register', methods=['GET'])
 def register_form():
-    """Show form for user signup."""
+    """Show form for create profile."""
 
     return render_template("register.html")
 
 
 @app.route('/register', methods=['POST'])
 def register_process():
-    """Process registration."""
+    """Process create profile page."""
 
     # Get form variables
     username = request.form["username"]
@@ -105,6 +105,11 @@ def logout():
     return redirect("/home")
 
 
+# @app.route('/create profile')
+# def create_account_page():
+#     """Display account creation form."""
+
+#     return render_template("register.html")
 
 @app.route('/recipes')
 def recipe():
@@ -128,9 +133,11 @@ def ingredient():
 def recipe_ingredients(ingredient_id):
     """Show results for ingredients in recipe."""
     recipes = Recipe.query.filter(Ingredient.ingredient_id == ingredient_id).all()
-    #return render_template('recipe.html')
+    
     #return render_template("recipe.html")
-    return redirect("/recipes")
+    #return redirect("/recipes")
+    return render_template("recipe2.html")
+
 
 
 if __name__ == "__main__":
