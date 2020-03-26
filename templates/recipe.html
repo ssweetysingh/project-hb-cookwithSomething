@@ -1,41 +1,82 @@
 {% extends 'base.html' %}
 {% block content %}
-        <title>List of recipe tht matches the ingredients</title>
+      <title>List of recipe tht matches the ingredients</title>
         <style>
+        img {
+         border: 8px solid #555;
+         }
+         
+
         </style>
     </head>
        
-        <h2>Here is the list of Dishes you can create using Chicken, Rice, Beans, <br>Cauliflower, Spinach..</h2>
+        <h2> Dishes you can create using Chicken, Rice, Beans, <br>Cauliflower, Spinach..</h2>
         
         
 <body>
 <form action="/recipe">
-<h4>Chicken, Rice, Cauliflower Recipes</h4>
+<h4>One place to plan your entire Menu based on ingredient: Chicken, Rice, Cauliflower etc.. Recipes</h4>
 
 <body body style="background-color:powderblue;">
 <div class="row">
-  
-    <p>
-  Click the image for the chicken recipes: <a href="https://www.allrecipes.com/recipe/14544/marinated-grilled-chicken-ii/">
+
+  <style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+  <div class="row">
+  <div class="column">
+  <p>
+    Click the image for the chicken recipes: <a href="https://www.allrecipes.com/recipe/14544/marinated-grilled-chicken-ii/">
     <div class="column">
-    <img src="static/food-image/Air-Fryer-Chicken-Breasts-9.jpg" width = "300" height="250">
+    <img src="static/food-image/Air-Fryer-Chicken-Breasts.jpg" width = "300" height = "300">
+  </div>
   </a>
 </p>
-  </div>
+</div>
   <p>
   Click the image for the rice recipes: <a href="https://www.allrecipes.com/recipe/20791/cashew-raisin-rice-pilaf/">
   <div class="column">
-    <img src="static/food-image/Cashew-Raisin-Pulao-2-768x1242.jpg" width = "300" height = "300">
+    <img src="static/food-image/Cashew-Raisin-Pulao-.jpg" width = "300" height = "300">
   </div>
   </a>
 </p>
 <p>
 Click the image for the cauliflower recipes: <a href="https://www.allrecipes.com/recipe/239869/butter-roasted-cauliflower/">
   <div class="column">
-    <img src="static/food-image/crispy-cauliflower-wings-recipe.jpg" width = "300" height ="250">
+    <img src="static/food-image/crispy-cauliflower-wings-recipe.jpg" width = "300" height ="300">
   </a>
   </p>
   </div>
+  <p>
+Click the image for the chili recipes: <a href="https://www.allrecipes.com/recipe/72508/the-best-vegetarian-chili-in-the-world/">
+  <div class="column">
+    <img src="static/food-image/veg chili.jpeg" width = "300" height ="300">
+  </a>
+  </p>
+  </div>
+  <p>
+Click the image for the spinach recipes: <a href="https://www.allrecipes.com/recipes/15111/salad/green-salads/spinach-salad/">
+  <div class="column">
+    <img src="static/food-image/spinach-pomegranate-salad-6.jpg" width = "300" height ="300">
+  </a>
+  </p>
+  </div>
+</div>
 </form>
 {% endblock %}
 
