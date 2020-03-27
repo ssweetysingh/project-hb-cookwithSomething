@@ -135,7 +135,7 @@ def recipe_ingredients(ingredient_id):
     recipes = Recipe.query.filter(Ingredient.ingredient_id == ingredient_id).all()
     
     #return render_template("recipe.html")
-    #return redirect("/recipes")
+    #return redirect("/Ingredient")
     return render_template("recipe2.html")
 
 
