@@ -82,17 +82,17 @@ def login_process():
 
     session["user_id"] = user.user_id
 
-    '''jsonify login page'''
+    """jsonify login page"""
 
     # if username and password:
     #     name = username
 
     #     return jsonify({'username' : name})
 
-    # return jsonify({'error' : 'Missing fields'})
+    #     return jsonify({'error' : 'Missing fields'})
 
-    flash("Logged in")
-    return redirect("/home")
+    # flash("Logged in")
+    # return redirect("/home")
 
 
 
@@ -135,9 +135,13 @@ def recipe_ingredients(ingredient_id):
     recipes = Recipe.query.filter(Ingredient.ingredient_id == ingredient_id).all()
     
     #return render_template("recipe.html")
-    #return redirect("/Ingredient")
-    return render_template("recipe2.html")
+    #return render_template("recipe2.html")
+    return redirect('/recipes2') 
 
+@app.route('/recipes2')
+def recipe2():
+    # A query to retrieve a recipe based on id
+    return render_template('recipe2.html')
 
 
 if __name__ == "__main__":
