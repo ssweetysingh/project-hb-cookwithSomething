@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
@@ -55,9 +56,19 @@ span.psw {
   }
 }
 </style>
-</head>
 <body>
-
+<script type="text/javascript">
+  function validate_password() {
+    pw = document.getElementById("psw").value;
+    cpw = document.getElementById("cpsw").value;
+    if(pw != cpw) {
+      document.getElementById("pvalid").innerHTML = "Please match passwords"
+    }
+    else {
+      document.getElementById("pvalid").innerHTML = ""
+    }
+  }
+</script>
 <h3>CookWithSomething uses the recipes you save and cooks you follow to suggest.<br>Join for free!</h3>
 
 <form action="/action_page.php" method="post">
@@ -66,11 +77,11 @@ span.psw {
     <input type="text" placeholder="Enter Username" name="uname" required>
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="password" placeholder="Enter Password" id="psw" name="psw" required>
 
     <label for="cpsw"><b>Confirm Password</b></label>
-    <input type="password" placeholder="Confirm-Password" name="cpsw" required>
-        
+    <input type="password" placeholder="Confirm-Password" id="cpsw" name="cpsw" oninput="validate_password()" required>
+        <label id="pvalid"></label>
     <button type="submit">Login</button>
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
