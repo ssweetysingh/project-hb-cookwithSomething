@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block content %}
+      <title>List of recipe tht matches the ingredients</title>
+        <style>
+        img {
+         border: 8px solid #555;
+         }
+         
+
+        </style>
+    </head>
+       
+        <h2> Dishes you can create using Chicken</h2>
+              
+<body>
+<form action="/recipe">
+
+  <style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+  <div class="row">
+  <div class="column">
+  <p>
+    Click the image for grilled chicken recipes: <a href="https://www.allrecipes.com/recipe/20791/cashew-raisin-rice-pilaf">
+    <div class="column">
+    <img src="static/food-image/Cashew-Raisin-Pulao-.jpg" width = "300" height = "300">
+  </div>
+  </a>
+</p>
+</div>
+  <p>
+  Click the image for butter chicken recipe: <a href="https://www.allrecipes.com/recipe/79543/fried-rice-restaurant-style">
+  <div class="column">
+    <img src="static/food-image/friedrice.jpg" width = "300" height = "300">
+  </div>
+  </a>
+</p>
+<p>
+Click the image for cahun chicken recipe: <a href="https://www.allrecipes.com/recipe/257425/chef-johns-classic-rice-pudding/">
+  <div class="column">
+    <img src="static/food-image/Healthy-Rice-Pudding.jpg" width = "300" height ="300">
+  </a>
+  </p>
+  </div>
+</div>
+</form>
+{% endblock %}
