@@ -22,7 +22,7 @@ As a user wanting to add an ingredient, when on the ingredient page user have li
 
 Features:
 Existing Features
-Ingredient dropdown list – allow users to select ingredients from the list for specific recipes (e.g. chicken recipes) by selecting one or more of the ingredients.
+Ingredient list with update feature– allow users to select ingredients from the list for specific recipes (e.g. chicken recipes) by selecting one or more of the ingredients.
 Recipe page – allows users to search more recipes in the page by clicking on the image.
 source links – allows users by clicking the source link fro more recipes.
 
