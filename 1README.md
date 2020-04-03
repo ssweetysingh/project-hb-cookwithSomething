@@ -1,5 +1,5 @@
 # project-hb-cookwithSomething
-An web applicaito: find the list of ingredients in the pantry/refrigerator use the ingredients to create the recipe or meal plan.
+An web application: find the list of ingredients in the pantry/refrigerator use the ingredients to create the recipe or meal plan.
 Cookbooks with recipe or direct the user to the websites.
 
 My product Features:
@@ -25,6 +25,18 @@ Existing Features
 Ingredient list with update feature– allow users to select ingredients from the list for specific recipes (e.g. chicken recipes) by selecting one or more of the ingredients.
 Recipe page – allows users to search more recipes in the page by clicking on the image.
 source links – allows users by clicking the source link fro more recipes.
+
+Technologies
+Python
+Flask
+Jinja2
+PostgreSQL
+SQLAlchemy ORM
+HTML
+CSS
+JavaScript
+JQuery
+
 
 
 
