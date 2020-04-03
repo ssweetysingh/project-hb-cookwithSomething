@@ -37,8 +37,15 @@ CSS
 JavaScript
 JQuery
 
+# Landing Page
 ![alt text](https://github.com/ssweetysingh/project-hb-cookwithSomething/blob/master/static/food-image/landingpage.png)
-# My cool project and above is the landing page of it
+
+# Important Feature
+![alt text](https://github.com/ssweetysingh/project-hb-cookwithSomething/blob/master/static/food-image/registerpage.png)
+
+# Recipe Page
+![alt text](https://github.com/ssweetysingh/project-hb-cookwithSomething/blob/master/static/food-image/recipepage.png)
+
 
 
 
