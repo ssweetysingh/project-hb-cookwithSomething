@@ -37,7 +37,7 @@ CSS
 JavaScript
 JQuery
 
-https://github.com/ssweetysingh/project-hb-cookwithSomething/blob/master/static/food-image/landingpage.png
+![alt text](https://github.com/ssweetysingh/project-hb-cookwithSomething/blob/master/static/food-image/landingpage.png)
 # My cool project and above is the landing page of it
 
 
