@@ -37,7 +37,7 @@ CSS
 JavaScript
 JQuery
 
-<img src="/"static/food-image/landingpage 2.png" alt="My cool logo"/>
+<img src="/"static/food-image/landingpage 2.png" alt="landing Page"/>
 # My cool project and above is the landing page of it
 
 
