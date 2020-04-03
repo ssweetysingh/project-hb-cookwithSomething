@@ -37,7 +37,7 @@ CSS
 JavaScript
 JQuery
 
-![alt text](screenshots/Screen Shot home.png "Landing page")
+![Screenshot](Screen Shot home.png)
 
 
 
