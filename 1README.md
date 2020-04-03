@@ -26,7 +26,7 @@ Ingredient list with update feature– allow users to select ingredients from th
 Recipe page – allows users to search more recipes in the page by clicking on the image.
 source links – allows users by clicking the source link fro more recipes.
 
-Technologies
+Technologies:
 Python
 Flask
 Jinja2
