@@ -37,7 +37,7 @@ CSS
 JavaScript
 JQuery
 
-<img src="/"static/food-image/landingpage 2.png" alt="landing Page"/>
+https://github.com/ssweetysingh/project-hb-cookwithSomething/blob/master/static/food-image/landingpage.png
 # My cool project and above is the landing page of it
 
 
