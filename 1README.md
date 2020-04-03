@@ -37,8 +37,8 @@ CSS
 JavaScript
 JQuery
 
-![Screenshot](Screen Shot home.png)
-
+<img src="/"static/food-image/landingpage 2.png" alt="My cool logo"/>
+# My cool project and above is the landing page of it
 
 
 
